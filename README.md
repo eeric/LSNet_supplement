@@ -8,6 +8,7 @@ matplotlib
 shapely
 
 scipy
+
 ##（1）安装mmcv, 例如cuda版本 10.0.130
 
 pip3 install mmcv-full -f  https://download.openmmlab.com/mmcv/dist/cu101/torch1.5.0/index.html
