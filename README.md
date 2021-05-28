@@ -55,3 +55,6 @@ sudo ldconfig /usr/local/cuda-10.0/lib64
 ## （7）训练命令
 
 ./code/tools/dist_train.sh ./code/configs/lsnet/lsnet_bbox_r50_fpn_1x_coco.py 2 --work-dir work_dir/lsnet_bbox_r50_fpn_1x_coco
+
+## 可选：使用虚拟环境
+用virtualenv包
