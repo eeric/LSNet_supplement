@@ -51,7 +51,7 @@ Project material supplement
     './_base_/schedules/schedule_1x.py',#模型设置
 
     './_base_/default_runtime.py' 
-## (7)Generate extreme point annotation from segmentation:
+## （7）Generate extreme point annotation from segmentation:
 
     cd code/tools
     python gen_coco_lsvr.py
