@@ -21,3 +21,6 @@ ResNet50: https://download.pytorch.org/models/resnet50-19c8e357.pth
 ResNet101: https://download.pytorch.org/models/resnet101-5d3b4d8f.pth
 ResNeXt101-64x4d: https://open-mmlab.s3.ap-northeast-2.amazonaws.com/pretrain/third_party/resnext101_64x4d-ee2c6f71.pth
 Res2Net101: https://download.openmmlab.com/pretrain/third_party/res2net101_v1d_26w_4s_mmdetv2-f0a600f9.pth
+
+3.不能删除laster.pth
+在work_dirs文件夹，保存训练的模型，同时也有个laster.pth，可能是带软连接吧，把这个laster.pth删除了，会导致整个项目除work_dirs文件夹保留，其它的文件删除。
