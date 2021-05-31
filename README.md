@@ -52,11 +52,9 @@ Project material supplement
 
     './_base_/default_runtime.py' 
 ## （7）Generate extreme point annotation from segmentation:
-
     cd code/tools
     python gen_coco_lsvr.py
     生成instances_lsvr_train2017.json，instances_lsvr_val2017.json，放入路径coco/annotations
-
 ## （8）训练
 ### detection
     ./code/tools/dist_train.sh ./code/configs/lsnet/lsnet_bbox_r50_fpn_1x_coco.py 2 --work-dir work_dir/lsnet_bbox_r50_fpn_1x_coco
