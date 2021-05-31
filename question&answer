@@ -1,42 +1,3 @@
-1.ValueError: Invalid RGBA argument: 'magneta'
-mmcv/visualization/image.py", line 345, in imshow_pose
-plt.savefig(out_file)
-
-matplotlib/colors.py", line 260, in _to_rgba_no_colorcycle
-raise ValueError(f"Invalid RGBA argument: {orig_c!r}")
-ValueError: Invalid RGBA argument: 'magneta'
-
-## answer
-in code/mmcv/mmcv/visualization/image.py
-the line 330:
-color = 'magneta'
-单词错了，应改为：
-color = 'magenta'
-这样能可视化了，能保存效果图。
-
-2. 预训练模型
-如 pretrained='../checkpoints/pretrained/resnet50-19c8e357.pth'
-## answer
-ResNet50: https://download.pytorch.org/models/resnet50-19c8e357.pth
-ResNet101: https://download.pytorch.org/models/resnet101-5d3b4d8f.pth
-ResNeXt101-64x4d: https://open-mmlab.s3.ap-northeast-2.amazonaws.com/pretrain/third_party/resnext101_64x4d-ee2c6f71.pth
-Res2Net101: https://download.openmmlab.com/pretrain/third_party/res2net101_v1d_26w_4s_mmdetv2-f0a600f9.pth
-
-3.不能删除laster.pth
-## answer
-在work_dirs文件夹，保存训练的模型，同时也有个laster.pth，可能是带软连接吧，把这个laster.pth删除了，会导致整个项目除work_dirs文件夹保留，其它的文件删除。
-
-4.KeyError: ‘ConvWS is already registered in conv layer‘
-## answer
-mmdet/ops/conv_ws.py
-the 23th line:
-@CONV_LAYERS.register_module('ConvWS')
-modified:
-@CONV_LAYERS.register_module(name='ConvWS', force=True)
-the 52th line as above.
-the reason that mmcv edition may be higher.
-
-5.
 
 1.ValueError: Invalid RGBA argument: 'magneta'
 mmcv/visualization/image.py", line 345, in imshow_pose
@@ -84,5 +45,11 @@ then,
 cd cocoapi/pycocotools
 python setup.py develop
 
-6.
+6.little bug
+## answer
+in LSNet/code/setup.py
+the 13th line:
+with open('README.md', encoding='utf-8') as f:
 
+should be modified as below:
+with open('../README.md', encoding='utf-8') as f:
