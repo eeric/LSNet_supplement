@@ -1,0 +1,15 @@
+## 1.question
+mmcv/visualization/image.py", line 345, in imshow_pose
+plt.savefig(out_file)
+
+matplotlib/colors.py", line 260, in _to_rgba_no_colorcycle
+raise ValueError(f"Invalid RGBA argument: {orig_c!r}")
+ValueError: Invalid RGBA argument: 'magneta'
+
+## answer
+in code/mmcv/mmcv/visualization/image.py
+the line 330:
+color = 'magneta'
+单词错了，应改为：
+color = 'magenta'
+这样能可视化了，能保存效果图。
