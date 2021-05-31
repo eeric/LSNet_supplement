@@ -9,6 +9,10 @@ Project material supplement
     shapely
 
     scipy
+    
+    torch==1.5.0
+    
+    torch==0.6.0
 
 ## （1）安装mmcv, 例如cuda版本 10.0.130
 
