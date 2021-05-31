@@ -1,4 +1,4 @@
-## 1.question
+1.ValueError: Invalid RGBA argument: 'magneta'
 mmcv/visualization/image.py", line 345, in imshow_pose
 plt.savefig(out_file)
 
@@ -13,3 +13,5 @@ color = 'magneta'
 单词错了，应改为：
 color = 'magenta'
 这样能可视化了，能保存效果图。
+
+2. 
