@@ -57,15 +57,15 @@ Project material supplement
     python gen_coco_lsvr.py
     生成instances_lsvr_train2017.json，instances_lsvr_val2017.json，放入路径coco/annotations
 
-## （8）训练命令
-
+## （8）训练
 ### detection
-
     ./code/tools/dist_train.sh ./code/configs/lsnet/lsnet_bbox_r50_fpn_1x_coco.py 2 --work-dir work_dir/lsnet_bbox_r50_fpn_1x_coco
 ### detection + pose
-
     ./code/tools/dist_train.sh ./code/configs/lsnet/lsnet_pose_bbox_r50_fpn_1x_coco.py 2 --work-dir work_dir/lsnet_pose_bbox_r50_fpn_1x_coco
-    
-
+## (9)测试
+### detection
+    python3 code/tools/test.py code/configs/lsnet/lsnet_bbox_r50_fpn_1x_coco.py work_dir/lsnet_bbox_r50_fpn_1x_coco/epoch_12.pth --show-dir ./results
+### detection + pose 
+    python3 code/tools/test.py code/configs/lsnet/lsnet_pose_bbox_r50_fpn_1x_coco.py work_dir/lsnet_pose_bbox_r50_fpn_1x_coco/epoch_12.pth --show-dir ./results
 ## 可选：使用虚拟环境
     用virtualenv包
