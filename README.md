@@ -1,6 +1,7 @@
 # LSNet_supplement
 Project material supplement
-
+## LSNet
+https://github.com/Duankaiwen/LSNet
 
 ## 安装包
 
